@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Leandro Augusto",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -143.7, "left": 340.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:5V", "red", [ "v249.6", "h-134.4" ] ],
+    [ "dht1:SDA", "esp:23", "gold", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

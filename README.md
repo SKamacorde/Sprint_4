@@ -18,6 +18,7 @@
 | Leandro Augusto Jardim da Cunha | RM561395 |
 | Luiz Eduardo da Silva           | RM561701 |
 | João Victor Viana de Sousa      | RM565136 |
+| Guilherme Ribeiro Slaviero      | RM561757 |
 
 ---
 

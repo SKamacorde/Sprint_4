@@ -41,18 +41,18 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 -   Os sensores realizam leituras a cada minuto e enviam os dados por meio do protocolo MQTT.
 -   Um consumidor (consumer) recebe as mensagens e armazena os valores medidos na tabela `TBL_MONITORAMENTO`.
 -   O sistema compara essas leituras com os valores mínimo e máximo definidos na tabela `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para envio de alertas.
-<p align="center">
-  <img src="Python/assets/esp32.png" alt="Imagem ESP32" width="500"/>
-</p>
 
 ## 📝 Informações Relevantes e Dados Necessários
 
 O sistema deve responder a perguntas como:
 
-1. **Buscar os registro do sensor de umidade para a cultura cafe**
+1. **Sensor de umidade para a cultura cafe realiza a leitura a cada minuto**
+-   Os sensores realizam leituras a cada minuto e enviam os dados por meio do protocolo MQTT.
+<p align="center">
+  <img src="Python/assets/esp32.png" alt="Imagem ESP32" width="500"/>
+</p>
 
-2. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
-
+2. **Sensores registram leituras a cada minuto, armazenadas em TBL_MONITORAMENTO**
     - Um consumidor (consumer) recebe as mensagens e armazena os valores medidos na tabela `TBL_MONITORAMENTO`
       <p align="center">
         <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
@@ -63,11 +63,10 @@ O sistema deve responder a perguntas como:
       </p>
 
 3. **Quais são os valores ideais para cada cultura monitorada?**
-
     - O sistema compara essas leituras com os valores mínimo e máximo definidos na tabela `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para envio de alertas.
-      <p align="center">
-        <img src="Python/assets/regra_de_validacao.png.png" alt="Imagem da regra de validação dos campos" width="500"/>
-      </p>
+        <p align="center">
+          <img src="Python/assets/regra_de_validacao.png.png" alt="Imagem da regra de validação dos campos" width="500"/>
+        </p>
     - Dados: Faixas mínimas/máximas por sensor e cultura (`TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`).
     - Exemplo de consulta:
 
@@ -79,9 +78,7 @@ O sistema deve responder a perguntas como:
         JOIN TBL_PRODUTO_SENSOR ps ON cps.cd_produto_sensor = ps.cd_produto_sensor
         JOIN TBL_SENSOR s ON ps.cd_sensor = s.cd_sensor
         WHERE cps.cd_cultura_produto_sensor = 1;
-        ```
-
-    -
+        ```   
 
 ## Dashboard Sensor de Umidade
 

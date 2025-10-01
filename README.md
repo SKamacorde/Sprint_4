@@ -48,8 +48,6 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 
 ## 📝 Informações Relevantes e Dados Necessários
 
-- <img src="Python/assets/esp32.png" alt="Imagem ESP32" width="500"/>
-
 O sistema deve responder a perguntas como:
 
 1. **Buscar os registro do sensor de umidade para a cultura cafe**    

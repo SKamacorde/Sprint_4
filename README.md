@@ -193,4 +193,4 @@ CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido,
 
 ## 🔗 Link para o Repositório
 
-[] <!-- Incluir o link -->
+(https://github.com/SKamacorde/Sprint_4)

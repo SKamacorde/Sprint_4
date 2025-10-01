@@ -48,8 +48,10 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 
 O sistema deve responder a perguntas como:
 
-1. **Buscar os registro do sensor de umidade para a cultura cafe**    
-    - <img src="Python/assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
+1. **Buscar os registro do sensor de umidade para a cultura cafe**
+       <p align="center">   
+        <img src="Python/assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
+      </p>
     - Exemplo de consulta:
         ```sql
         SELECT a.cd_cultura_produto_sensor,e.nm_cultura ,  c.nm_sensor
@@ -63,7 +65,7 @@ O sistema deve responder a perguntas como:
         WHERE a.cd_cultura_produto_sensor = 1
         ```
 
-2. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
+3. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
     <p align="center">
       <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
     </p>
@@ -74,7 +76,7 @@ O sistema deve responder a perguntas como:
         FROM TBL_MONITORAMENTO WHERE cd_cultura_produto_sensor = 1
         ```
 
-3. **Quais são os valores ideais para cada cultura monitorada?**
+4. **Quais são os valores ideais para cada cultura monitorada?**
     - Dados: Faixas mínimas/máximas por sensor e cultura (`TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`).
     - Exemplo de consulta:
         ```sql

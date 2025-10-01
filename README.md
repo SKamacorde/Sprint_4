@@ -36,51 +36,6 @@
 
 A solução proposta utiliza sensores para monitoramento em tempo real de variáveis do solo, como umidade. Os dados são coleatados, processados e armazenados para subsidiar decisões técnicas, como a aplicação de insumos agrícolas, além de possibilitar análises históricas e preditivas, otimizando os recursos e promovendo maior eficiência no cultivo.
 
-##📌 Funcionalidades do Sistema
-
-🔹 Coleta Automática de Dados
-
-Sensores registram leituras a cada hora.
-
-Dados enviados ao ESP32 e armazenados em TBL_MONITORAMENTO.
-
-🔹 Armazenamento e Histórico
-
-Registros ficam disponíveis para análises futuras.
-
-Consultas podem ser filtradas por cultura, produto e sensor.
-
-🔹 Comparação com Faixas Ideais
-
-O sistema valida automaticamente os valores com base nos limites definidos em TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO.
-
-Classificação em: Abaixo do Ideal, Dentro do Ideal ou Acima do Ideal.
-
-🔹 Consultas e Relatórios via SQL
-
-Buscar registros de sensores por cultura específica.
-
-Visualizar limites ideais de cada cultura monitorada.
-
-Gerar relatórios históricos de medições.
-
-🔹 Painel de Monitoramento (Dashboard)
-
-Gráficos dinâmicos mostram as medições em tempo real.
-
-Destaque visual para leituras fora do padrão.
-
-🔹 Alertas e Recomendações
-
-Sinalização automática quando leituras ultrapassam limites definidos.
-
-Possibilidade de integração com e-mail/API para notificação de usuários.
-
-🔹 Suporte a Análises Preditivas
-
-Uso de algoritmos de Machine Learning (ex.: Random Forest).
-
-Previsão de tendências futuras para auxiliar em decisões de irrigação.
 
 ### Regras de Negócio
 

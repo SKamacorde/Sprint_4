@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
         # Layout do dashboard
         app.layout = html.Div([
-            html.H1("📊 Dashboard do "),
+            html.H1("📊 Dashboard sensor de umidade "),
             dcc.Dropdown(
                 id='sensor-selector',
                 options=[{'label': nome, 'value': nome} for nome in valid_sensors],

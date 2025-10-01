@@ -202,7 +202,7 @@ CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido,
 <p align="center">
   <img src="Python/assets/alert.png" alt="Imagem Alerta de Umidade" width="500"/>
 </p>
----
+
 
 ## 🔗 Link para o Repositório
 

@@ -64,8 +64,9 @@ O sistema deve responder a perguntas como:
         ```
 
 2. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
-    
-    - <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
+    <p align="center">
+      <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
+    </p>
     - Dados: Retorna os registros da tabela de monitoramento (`TBL_MONITORAMENTO`).
     - Exemplo de consulta:
         ```sql
@@ -86,20 +87,22 @@ O sistema deve responder a perguntas como:
         WHERE cps.cd_cultura_produto_sensor = 1;
         ```
 ## Dashboard Sensor de Umidade
-- <img src="Python/assets/dashboard.png" alt="Imagem Dashboard Sensor de Umidade" width="500"/>
-
+<p align="center">
+  <img src="Python/assets/dashboard.png" alt="Imagem Dashboard Sensor de Umidade" width="500"/>
+</p>
 ---
 
 ## 🧱 Diagrama ER (Entidade-Relacionamento) com entidades, atributos, relacionamentos, cardinalidades e chaves primárias/estrangeiras;
 
 Imagem do Diagrama ER exportado.
-
-<img src="Python/assets/DER.png" alt="Imagem do Diagrama ER" width="500"/>
+<p align="center">
+  <img src="Python/assets/DER.png" alt="Imagem do Diagrama ER" width="500"/>
+</p>
 
 Arquivos do projeto de modelagem de banco de dados (.dmd, .sql ou outro formato)
-
-<img src="Python/assets/script_arquivo_modelagem.png" alt="Imagem do Diagrama ER" width="500"/>
-
+<p align="center">
+  <img src="Python/assets/script_arquivo_modelagem.png" alt="Imagem do Diagrama ER" width="500"/>
+</p>
 ### Entidades e Atributos
 
 1. **TBL_SENSOR**
@@ -182,9 +185,9 @@ CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido,
 -   RandomForestClassifier → cria um classificador baseado em Random Forest, que é um conjunto de árvores de decisão.
 -   n_estimators=100 → o modelo vai criar 100 árvores; mais árvores geralmente melhoram a estabilidade, mas aumentam o tempo de treinamento.
 -   random_state=42 → garante reprodutibilidade; sempre que rodar com a mesma seed, os resultados serão iguais
-
-<img src="Python/assets/grafico_classificacao.png" alt="Imagem do Diagrama ER" width="500"/>
-
+<p align="center">
+  <img src="Python/assets/grafico_classificacao.png" alt="Imagem do Diagrama ER" width="500"/>
+</p>
 ## 🌱 Possíveis Extensões
 
 -   **Modelos Preditivos Simples**: Com os dados históricos registrados em `TBL_MONITORAMENTO`, é possível aplicar regressões lineares ou modelos de séries temporais simples (como média móvel ou suavização exponencial) para estimar variações futuras de umidade ou pH, contribuindo, por conseguinte, uma irrigação mais eficiente.
@@ -192,9 +195,9 @@ CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido,
 -   **Dashboards Operacionais**: Usando ferramentas como Power BI, Metabase ou até planilhas conectadas ao banco, é possível gerar painéis visuais com gráficos de tendência por cultura, tipo de sensor, faixas críticas de medição, entre outros indicadores operacionais.
 
 -   **Alertas com SQL + Scripts Externos**: É viável desenvolver um script externo (em Python, por exemplo) que execute periodicamente consultas SQL no banco de dados e envie e-mails ou mensagens via API (como Telegram) sempre que forem detectadas leituras fora dos limites definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`.
-
-<img src="Python/assets/alert.png" alt="Imagem Alerta de Umidade" width="500"/>
-
+<p align="center">
+  <img src="Python/assets/alert.png" alt="Imagem Alerta de Umidade" width="500"/>
+</p>
 ---
 
 ## 🔗 Link para o Repositório

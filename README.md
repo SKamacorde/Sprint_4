@@ -94,7 +94,7 @@ O sistema deve responder a perguntas como:
 <p align="center">
   <img src="Python/assets/dashboard.png" alt="Imagem Dashboard Sensor de Umidade" width="500"/>
 </p>
----
+
 
 ## 🧱 Diagrama ER (Entidade-Relacionamento) com entidades, atributos, relacionamentos, cardinalidades e chaves primárias/estrangeiras;
 
@@ -105,7 +105,7 @@ Imagem do Diagrama ER exportado.
 
 Arquivos do projeto de modelagem de banco de dados (.dmd, .sql ou outro formato)
 <p align="center">
-  <img src="Python/assets/script_arquivo_modelagem.png" alt="Imagem do Diagrama ER" width="500"/>
+  <img src="Python/assets/script_arquivo_modelagem.png" alt="Imagem Arquivo de modelagem" width="500"/>
 </p>
 ### Entidades e Atributos
 

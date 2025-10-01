@@ -44,7 +44,7 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 -   O sistema compara leituras com valores mínimo/máximo definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para sugerir ajustes.
   
 <img src="assets/esp32.png" alt="Imagem ESP32" width="500"/>
-![Distribuição do Yield](Python/assets/esp32.png)  
+![Distribuição do Yield](./Python/assets/esp32.png)  
 
 
 

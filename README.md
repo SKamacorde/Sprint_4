@@ -42,13 +42,18 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 
 -   Sensores registram leituras a cada hora, armazenadas em `TBL_MONITORAMENTO`.
 -   O sistema compara leituras com valores mínimo/máximo definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para sugerir ajustes.
+  
+<img src="assets/esp32.png" alt="Imagem ESP32" width="500"/>
+
+
 
 ## 📝 Informações Relevantes e Dados Necessários
 
+- <img src="assets/esp32.png" alt="Imagem ESP32" width="500"/>
+
 O sistema deve responder a perguntas como:
 
-1. **Buscar os registro do sensor de umidade para a cultura cafe**
-
+1. **Buscar os registro do sensor de umidade para a cultura cafe**    
     - <img src="assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
     - Exemplo de consulta:
         ```sql
@@ -64,7 +69,8 @@ O sistema deve responder a perguntas como:
         ```
 
 2. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
-
+    
+    - <img src="assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
     - Dados: Retorna os registros da tabela de monitoramento (`TBL_MONITORAMENTO`).
     - Exemplo de consulta:
         ```sql
@@ -84,6 +90,8 @@ O sistema deve responder a perguntas como:
         JOIN TBL_SENSOR s ON ps.cd_sensor = s.cd_sensor
         WHERE cps.cd_cultura_produto_sensor = 1;
         ```
+## Dashboard Sensor de Umidade
+- <img src="assets/dashboard.png" alt="Imagem Dashboard Sensor de Umidade" width="500"/>
 
 ---
 
@@ -189,6 +197,8 @@ CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido,
 -   **Dashboards Operacionais**: Usando ferramentas como Power BI, Metabase ou até planilhas conectadas ao banco, é possível gerar painéis visuais com gráficos de tendência por cultura, tipo de sensor, faixas críticas de medição, entre outros indicadores operacionais.
 
 -   **Alertas com SQL + Scripts Externos**: É viável desenvolver um script externo (em Python, por exemplo) que execute periodicamente consultas SQL no banco de dados e envie e-mails ou mensagens via API (como Telegram) sempre que forem detectadas leituras fora dos limites definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`.
+
+<img src="assets/alert.png" alt="Imagem Alerta de Umidade" width="500"/>
 
 ---
 

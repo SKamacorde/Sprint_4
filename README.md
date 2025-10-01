@@ -52,6 +52,7 @@ O sistema deve responder a perguntas como:
        <p align="center">   
         <img src="Python/assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
       </p>
+      
     - Exemplo de consulta:
         ```sql
         SELECT a.cd_cultura_produto_sensor,e.nm_cultura ,  c.nm_sensor
@@ -69,6 +70,7 @@ O sistema deve responder a perguntas como:
     <p align="center">
       <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
     </p>
+    
     - Dados: Retorna os registros da tabela de monitoramento (`TBL_MONITORAMENTO`).
     - Exemplo de consulta:
         ```sql

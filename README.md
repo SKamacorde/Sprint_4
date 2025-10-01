@@ -40,11 +40,7 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 
 -   Sensores registram leituras a cada hora, armazenadas em `TBL_MONITORAMENTO`.
 -   O sistema compara leituras com valores mínimo/máximo definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para sugerir ajustes.
-  
-<img src="Python/assets/esp32.png" alt="Imagem ESP32" width="500"/>
- 
-
-
+-   <img src="Python/assets/esp32.png" alt="Imagem ESP32" width="500"/>
 
 ## 📝 Informações Relevantes e Dados Necessários
 

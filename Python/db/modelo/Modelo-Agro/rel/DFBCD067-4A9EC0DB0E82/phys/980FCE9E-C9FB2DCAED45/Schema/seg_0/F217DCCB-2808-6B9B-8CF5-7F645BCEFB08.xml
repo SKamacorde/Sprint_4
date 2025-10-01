@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaSqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.SchemaSqlServerv2k5" name="SCHEMA6" directorySegmentName="seg_0" id="F217DCCB-2808-6B9B-8CF5-7F645BCEFB08">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:17 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+</SchemaSqlServerv2k5>

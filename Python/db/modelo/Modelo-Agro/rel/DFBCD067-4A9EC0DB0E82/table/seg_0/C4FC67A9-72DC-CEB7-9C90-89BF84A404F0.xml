@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4FC67A9-72DC-CEB7-9C90-89BF84A404F0" name="TBL_APLICACAO_MONITORAMENTO">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>47295DFC-13CF-D253-1A7E-86974EE7047D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_aplicacao" id="90E942B1-2862-61F1-D15D-B4166D861057">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>A3B54798-5008-CB5E-8C60-D80DAA96BDB6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>476B6BBF-877F-5765-20CD-2E7257285CAC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_monitoramento" id="0D6C3BB0-9012-BF76-F0C9-3C0849F67269">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>F692A3AC-B496-2A69-999F-023D8402FF79</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>476B6BBF-877F-5765-20CD-2E7257285CAC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A11FE47-56A7-F34E-F660-2D5F8337B068" referredColumn="403E055B-D0FC-E3CD-50B5-A14781370387"/>
+</associations>
+</Column>
+<Column name="vlr_medido" id="DA52F742-F88C-7E08-7B80-5098EE671938">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>473C5680-C7B9-93ED-3B8E-984D934EC57F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>5F1A96D8-8F80-F721-75C1-104FB1B7F07E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vlr_minimo" id="956B80FC-EF96-596F-F725-5CF494E40CA1">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>4FDB85B0-B68A-11BF-69AC-715800A674ED</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>5F1A96D8-8F80-F721-75C1-104FB1B7F07E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vlr_maximo" id="D9EF0E77-CADB-7666-E63D-BF72028A678C">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>75D48D1A-1517-1423-FD0E-D73DF88163AF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>5F1A96D8-8F80-F721-75C1-104FB1B7F07E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vlr_aplicado" id="59414E92-4176-344F-F649-015D676D9E88">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>A1AF6B62-77D2-EF29-3932-5AD146C9D74E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>5F1A96D8-8F80-F721-75C1-104FB1B7F07E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_usuario_inclusao" id="D1D3CBB9-BC2E-7EE3-D282-E7F6EE198646">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>27DA5A8C-6D39-F34D-20FD-66D9A3C5311F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>476B6BBF-877F-5765-20CD-2E7257285CAC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_inclusao" id="88170D89-D760-B1CC-489B-89DA2CE805E4">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>8D2CE3E3-A6AE-7877-9A39-80EA13B8B1FA</importedID>
+<use>0</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<domain>715E1651-C999-AAD0-F51E-CF55D705508C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18A3B47A-A23B-C47C-4B74-403EA2A99C74" name="TBL_APLICACAO_MONITORAMENTO__IDX">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>4429F144-09BB-2246-2F9C-DB9DB453383B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90E942B1-2862-61F1-D15D-B4166D861057"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B149F2B3-6689-184F-7661-C73CCC6F6EC2" name="FK_TBL_APLICACAO_MONITORAMENTO_TBL_MONITORAMENTO">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D6C3BB0-9012-BF76-F0C9-3C0849F67269"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

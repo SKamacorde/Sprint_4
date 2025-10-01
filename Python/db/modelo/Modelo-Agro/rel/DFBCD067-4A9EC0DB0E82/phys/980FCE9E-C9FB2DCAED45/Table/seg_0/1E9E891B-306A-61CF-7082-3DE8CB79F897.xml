@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO" directorySegmentName="seg_0" id="1E9E891B-306A-61CF-7082-3DE8CB79F897">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<schema>7AFBF72D-1077-89F9-CB9A-10312914FFB4</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="cd_usuario_inclusao" id="05B7DF36-FF7D-D74C-1F0A-C33F95B7DCC0">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="cd_cultura_produto_sensor_configuracao" id="32F1D15B-AA91-7468-0358-B7154D52C52D">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<asIdentity>true</asIdentity>
+<identityForReplication>YES</identityForReplication>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="vlr_maximo" id="6342D5A8-28FC-F73E-A4E2-BA62824ED4CD">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="dt_inclusao" id="6CF25FC1-B2A8-457E-2E79-27F64DCA280B">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="cd_cultura_produto_sensor" id="72F489EC-6561-ECC8-73AD-2769F4E67710">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="vlr_minimo" id="BFAA1DE0-B187-7006-1EDD-6FC6B2B99E77">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO_TBL_CULTURA_PRODUTO_SENSOR" id="9B905CAB-06C5-1A46-910D-8DF73A39E57E">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>sql server -script - criação da tabelas</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO__IDX" id="F213B5A3-35DD-C03B-E807-575AF791923D">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>

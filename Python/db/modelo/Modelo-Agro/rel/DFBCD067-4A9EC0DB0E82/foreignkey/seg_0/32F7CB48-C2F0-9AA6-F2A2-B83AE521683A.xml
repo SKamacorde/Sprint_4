@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="32F7CB48-C2F0-9AA6-F2A2-B83AE521683A" containerWithKeyObject="83762B56-F16F-5820-AAAE-1016111CEC21" localFKIndex="90B465FF-63FC-6261-4D5E-9CBA9C18B6BD" name="FK_TBL_CULTURA_PRODUTO_SENSOR_TBL_PRODUTO_SENSOR">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>DF247449-46AA-C002-B622-38FDA7B1D3A7</importedID>
+<referredTableLongName>TBL_PRODUTO_SENSOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EFBF74FA-9FFD-06B6-8FDB-870CA7B96680</referredTableID>
+<keyObject>89F16BFD-BA8A-1F2C-2DD2-A6011A9F3E2A</keyObject>
+<referredKeyID>89F16BFD-BA8A-1F2C-2DD2-A6011A9F3E2A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_produto_sensor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

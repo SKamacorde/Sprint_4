@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelo-Agro" id="561B7171-0E83-A945-B19A-651B78259F8B" version="3.5">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:05:48 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>561B7171-0E83-A945-B19A-651B78259F8B</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="C26D48B1-0406-2EB6-BD30-3F72CC0104D2">
+<designStoragePath>C:\sql server -script - criação da tabelas</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

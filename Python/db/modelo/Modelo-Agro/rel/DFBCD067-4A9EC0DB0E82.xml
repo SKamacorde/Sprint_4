@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="sql server -script - criação da tabelas" id="DFBCD067-20AE-3813-8740-4A9EC0DB0E82" mainViewID="4D3D4136-80C7-E88D-C543-CEF3C1E2AC73">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:17 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>sql server -script - criação da tabelas.sql</fileName>
+<pathName>C:\Work\Fiap\Scripts</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

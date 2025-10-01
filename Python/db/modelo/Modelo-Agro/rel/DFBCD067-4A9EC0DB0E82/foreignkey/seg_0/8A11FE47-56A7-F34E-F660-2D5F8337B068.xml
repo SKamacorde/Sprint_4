@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8A11FE47-56A7-F34E-F660-2D5F8337B068" containerWithKeyObject="C4FC67A9-72DC-CEB7-9C90-89BF84A404F0" localFKIndex="B149F2B3-6689-184F-7661-C73CCC6F6EC2" name="FK_TBL_APLICACAO_MONITORAMENTO_TBL_MONITORAMENTO">
+<sourceDDLFile>sql server -script - criação da tabelas.sql</sourceDDLFile>
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<importedID>D7D77CB0-8749-DCF7-92B8-8665A4FAC2C8</importedID>
+<referredTableLongName>TBL_MONITORAMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B484C86F-C1B4-3C56-A59D-FC1ADE2B723F</referredTableID>
+<keyObject>A3ED7F47-710D-5131-303C-D1FBC8007E97</keyObject>
+<referredKeyID>A3ED7F47-710D-5131-303C-D1FBC8007E97</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_monitoramento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

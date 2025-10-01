@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="4D3D4136-80C7-E88D-C543-CEF3C1E2AC73" name="sql server -script - criação da tabelas" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

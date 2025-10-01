@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="sql server -script - criação da tabelas_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="476B6BBF-877F-5765-20CD-2E7257285CAC">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>sql server -script - criação da tabelas_Domains</fileName>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="DECIMAL_10_6_0" id="5F1A96D8-8F80-F721-75C1-104FB1B7F07E">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>sql server -script - criação da tabelas_Domains</fileName>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="DATETIME2_0_0_0" id="715E1651-C999-AAD0-F51E-CF55D705508C">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>sql server -script - criação da tabelas_Domains</fileName>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="770064B2-ECB0-86F2-0A5E-8190C77BE36A">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>50</dataTypeSize>
+<fileName>sql server -script - criação da tabelas_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="B85291FC-80E8-C9CB-F972-D56F3E732184">
+<createdBy>lando</createdBy>
+<createdTime>2025-08-31 14:06:21 UTC</createdTime>
+<ownerDesignName>Modelo-Agro</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>sql server -script - criação da tabelas_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

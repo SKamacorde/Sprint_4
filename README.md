@@ -36,11 +36,11 @@
 
 A solução proposta utiliza sensores para monitoramento em tempo real de variáveis do solo, como umidade. Os dados são coleatados, processados e armazenados para subsidiar decisões técnicas, como a aplicação de insumos agrícolas, além de possibilitar análises históricas e preditivas, otimizando os recursos e promovendo maior eficiência no cultivo.
 
-
 ### Regras de Negócio
 
--   Sensores registram leituras a cada hora, armazenadas em `TBL_MONITORAMENTO`.
--   O sistema compara leituras com valores mínimo/máximo definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para sugerir ajustes.
+-   Os sensores realizam leituras a cada minuto e enviam os dados por meio do protocolo MQTT.
+-   Um consumidor (consumer) recebe as mensagens e armazena os valores medidos na tabela `TBL_MONITORAMENTO`.
+-   O sistema compara essas leituras com os valores mínimo e máximo definidos na tabela `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para envio de alertas.
 <p align="center">
   <img src="Python/assets/esp32.png" alt="Imagem ESP32" width="500"/>
 </p>
@@ -50,10 +50,45 @@ A solução proposta utiliza sensores para monitoramento em tempo real de variá
 O sistema deve responder a perguntas como:
 
 1. **Buscar os registro do sensor de umidade para a cultura cafe**
-       <p align="center">   
-        <img src="Python/assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
+
+2. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
+
+    - Um consumidor (consumer) recebe as mensagens e armazena os valores medidos na tabela `TBL_MONITORAMENTO`
+      <p align="center">
+        <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
       </p>
-      
+    - Classe responsável por configurar e gerenciar a comunicação com a mensageira MQTT, incluindo a conexão com o broker, assinatura de tópicos e publicação/recebimento de mensagens.
+      <p align="center">
+        <img src="Python/assets/comunicacao_mensageira_ MQTT.png.png" alt="Imagem Recebendo os Dados" width="500"/>
+      </p>
+
+3. **Quais são os valores ideais para cada cultura monitorada?**
+
+    - O sistema compara essas leituras com os valores mínimo e máximo definidos na tabela `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para envio de alertas.
+      <p align="center">
+        <img src="Python/assets/regra_de_validacao.png.png" alt="Imagem da regra de validação dos campos" width="500"/>
+      </p>
+    - Dados: Faixas mínimas/máximas por sensor e cultura (`TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`).
+    - Exemplo de consulta:
+
+        ```sql
+        SELECT c.nm_cultura, s.nm_sensor, cfg.vlr_minimo, cfg.vlr_maximo
+        FROM TBL_CULTURA c
+        JOIN TBL_CULTURA_PRODUTO_SENSOR cps ON c.cd_cultura = cps.cd_cultura
+        JOIN TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO cfg ON cps.cd_cultura_produto_sensor = cfg.cd_cultura_produto_sensor
+        JOIN TBL_PRODUTO_SENSOR ps ON cps.cd_produto_sensor = ps.cd_produto_sensor
+        JOIN TBL_SENSOR s ON ps.cd_sensor = s.cd_sensor
+        WHERE cps.cd_cultura_produto_sensor = 1;
+        ```
+
+    -
+
+## Dashboard Sensor de Umidade
+
+-   Buscar os registro do sensor de umidade para a cultura cafe\*\*
+    <p align="center">   
+      <img src="Python/assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
+    </p>
     - Exemplo de consulta:
         ```sql
         SELECT a.cd_cultura_produto_sensor,e.nm_cultura ,  c.nm_sensor
@@ -65,46 +100,21 @@ O sistema deve responder a perguntas como:
         INNER JOIN TBL_CULTURA E
         ON E.cd_cultura = a.cd_cultura
         WHERE a.cd_cultura_produto_sensor = 1
-        ```
-
-3. **Sensores registram leituras a cada hora, armazenadas em TBL_MONITORAMENTO**
+    - Responsável por exibir os gráficos com os valores medidos pelos sensores, permitindo a visualização e análise dos dados em tempo real ou histórico 
     <p align="center">
-      <img src="Python/assets/consumer.png" alt="Imagem Recebendo os Dados" width="500"/>
+      <img src="Python/assets/dashboard.png" alt="Imagem Dashboard Sensor de Umidade" width="500"/>
     </p>
-    
-    - Dados: Retorna os registros da tabela de monitoramento (`TBL_MONITORAMENTO`).
-    - Exemplo de consulta:
-        ```sql
-        SELECT *
-        FROM TBL_MONITORAMENTO WHERE cd_cultura_produto_sensor = 1
-        ```
-
-4. **Quais são os valores ideais para cada cultura monitorada?**
-    - Dados: Faixas mínimas/máximas por sensor e cultura (`TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`).
-    - Exemplo de consulta:
-        ```sql
-        SELECT c.nm_cultura, s.nm_sensor, cfg.vlr_minimo, cfg.vlr_maximo
-        FROM TBL_CULTURA c
-        JOIN TBL_CULTURA_PRODUTO_SENSOR cps ON c.cd_cultura = cps.cd_cultura
-        JOIN TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO cfg ON cps.cd_cultura_produto_sensor = cfg.cd_cultura_produto_sensor
-        JOIN TBL_PRODUTO_SENSOR ps ON cps.cd_produto_sensor = ps.cd_produto_sensor
-        JOIN TBL_SENSOR s ON ps.cd_sensor = s.cd_sensor
-        WHERE cps.cd_cultura_produto_sensor = 1;
-        ```
-## Dashboard Sensor de Umidade
-<p align="center">
-  <img src="Python/assets/dashboard.png" alt="Imagem Dashboard Sensor de Umidade" width="500"/>
-</p>
-
 
 ## 🧱 Diagrama ER (Entidade-Relacionamento) com entidades, atributos, relacionamentos, cardinalidades e chaves primárias/estrangeiras;
 
 Imagem do Diagrama ER exportado.
+
 <p align="center">
   <img src="Python/assets/DER.png" alt="Imagem do Diagrama ER" width="500"/>
 </p>
 
 Arquivos do projeto de modelagem de banco de dados (.dmd, .sql ou outro formato)
+
 <p align="center">
   <img src="Python/assets/script_arquivo_modelagem.png" alt="Imagem Arquivo de modelagem" width="500"/>
 </p>
@@ -169,9 +179,9 @@ Arquivos do projeto de modelagem de banco de dados (.dmd, .sql ou outro formato)
 
 ### Índices
 
-CREATE INDEX TBL_MONITORAMENTO_IDX_VLR_MEDIDO ON TBL_MONITORAMENTO (vlr_medido);
-CREATE INDEX TBL_MONITORAMENTO_IDX_DT_MEDICAO ON TBL_MONITORAMENTO (dt_medicao);
-CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido, dt_medicao);
+-   `CREATE INDEX TBL_MONITORAMENTO_IDX_VLR_MEDIDO ON TBL_MONITORAMENTO (vlr_medido);`
+-   `CREATE INDEX TBL_MONITORAMENTO_IDX_DT_MEDICAO ON TBL_MONITORAMENTO (dt_medicao);`
+-   `CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido, dt_medicao);`
 
 ### Relacionamentos e Cardinalidade
 
@@ -193,17 +203,12 @@ CREATE INDEX TBL_MONITORAMENTO_IDX_MEDIDO_DATA ON TBL_MONITORAMENTO (vlr_medido,
 <p align="center">
   <img src="Python/assets/grafico_classificacao.png" alt="Imagem do Diagrama ER" width="500"/>
 </p>
+
 ## 🌱 Possíveis Extensões
 
 -   **Modelos Preditivos Simples**: Com os dados históricos registrados em `TBL_MONITORAMENTO`, é possível aplicar regressões lineares ou modelos de séries temporais simples (como média móvel ou suavização exponencial) para estimar variações futuras de umidade ou pH, contribuindo, por conseguinte, uma irrigação mais eficiente.
 
 -   **Dashboards Operacionais**: Usando ferramentas como Power BI, Metabase ou até planilhas conectadas ao banco, é possível gerar painéis visuais com gráficos de tendência por cultura, tipo de sensor, faixas críticas de medição, entre outros indicadores operacionais.
-
--   **Alertas com SQL + Scripts Externos**: É viável desenvolver um script externo (em Python, por exemplo) que execute periodicamente consultas SQL no banco de dados e envie e-mails ou mensagens via API (como Telegram) sempre que forem detectadas leituras fora dos limites definidos em `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`.
-<p align="center">
-  <img src="Python/assets/alert.png" alt="Imagem Alerta de Umidade" width="500"/>
-</p>
-
 
 ## 🔗 Link para o Repositório
 

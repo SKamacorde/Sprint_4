@@ -59,13 +59,13 @@ O sistema deve responder a perguntas como:
       </p>
     - Classe responsável por configurar e gerenciar a comunicação com a mensageira MQTT, incluindo a conexão com o broker, assinatura de tópicos e publicação/recebimento de mensagens.
       <p align="center">
-        <img src="Python/assets/comunicacao_mensageira_ MQTT.png.png" alt="Imagem Recebendo os Dados" width="500"/>
+        <img src="Python/assets/comunicacao_mensageira_ MQTT.png" alt="Imagem Recebendo os Dados" width="500"/>
       </p>
 
 3. **Quais são os valores ideais para cada cultura monitorada?**
     - O sistema compara essas leituras com os valores mínimo e máximo definidos na tabela `TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO` para envio de alertas.
         <p align="center">
-          <img src="Python/assets/regra_de_validacao.png.png" alt="Imagem da regra de validação dos campos" width="500"/>
+          <img src="Python/assets/regra_de_validacao.png" alt="Imagem da regra de validação dos campos" width="500"/>
         </p>
     - Dados: Faixas mínimas/máximas por sensor e cultura (`TBL_CULTURA_PRODUTO_SENSOR_CONFIGURACAO`).
     - Exemplo de consulta:
@@ -207,6 +207,8 @@ Arquivos do projeto de modelagem de banco de dados (.dmd, .sql ou outro formato)
 
 -   **Dashboards Operacionais**: Usando ferramentas como Power BI, Metabase ou até planilhas conectadas ao banco, é possível gerar painéis visuais com gráficos de tendência por cultura, tipo de sensor, faixas críticas de medição, entre outros indicadores operacionais.
 
-## 🔗 Link para o Repositório
-
+## 🔗 Links
+Link Video YouTube:
+(https://www.youtube.com/watch?v=qogCAJ_vV08)
+Link Repositorio:
 (https://github.com/SKamacorde/Sprint_4)

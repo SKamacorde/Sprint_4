@@ -209,6 +209,8 @@ Arquivos do projeto de modelagem de banco de dados (.dmd, .sql ou outro formato)
 
 ## 🔗 Links
 Link Video YouTube:
+
 (https://www.youtube.com/watch?v=qogCAJ_vV08)
+
 Link Repositorio:
 (https://github.com/SKamacorde/Sprint_4)

@@ -90,6 +90,7 @@ O sistema deve responder a perguntas como:
       <img src="Python/assets/query_consulta.png" alt="Imagem do Diagrama ER" width="500"/>
     </p>
     - Exemplo de consulta:
+    
         ```sql
         SELECT a.cd_cultura_produto_sensor,e.nm_cultura ,  c.nm_sensor
         FROM  TBL_CULTURA_PRODUTO_SENSOR A

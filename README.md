@@ -35,6 +35,9 @@
 ## 🎯 Introdução e Objetivo
 
 A solução proposta utiliza sensores para monitoramento em tempo real de variáveis do solo, como umidade. Os dados são coleatados, processados e armazenados para subsidiar decisões técnicas, como a aplicação de insumos agrícolas, além de possibilitar análises históricas e preditivas, otimizando os recursos e promovendo maior eficiência no cultivo.
+<p align="center">
+  <img src="Python/assets/arquitetura.png" alt="Imagem Arquitetura" width="500"/>
+</p>
 
 ### Regras de Negócio
 
